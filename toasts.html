@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toasts</title>
+    <!-- Text animation css -->
+    <link rel="stylesheet" href="css/textAnimation.css">
+    <!-- Toasts cdn -->
+    <link rel="stylesheet" href="css/toasts.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="waviy">
+        <span style="--i:1">T</span>
+        <span style="--i:2">O</span>
+        <span style="--i:3">A</span>
+        <span style="--i:4">S</span>
+        <span style="--i:5">T</span>
+        <span style="--i:6">S</span>
+        <span style="font-size: 15px; animation: unset;">@github.com/farmansaleh</span>
+    </div>
+    
+</body>
+<!-- Toasts cdn -->
+<script src="js/toasts.js"></script>
+<script src="js/jquery.toasts.min.js"></script>
+<script>
+    $(document).ready(function(){
+        openToastMessage('Toasts','Hover on the Toaster text to see the Toaster','info');
+    });
+    var typeCount = 1;
+    $('.waviy').hover(function(){
+        if(typeCount == 1){
+            openToastMessage('Facebook','Your post uploaded successfully','success');
+            typeCount++;
+        }else if(typeCount == 2){
+            openToastMessage('Facebook','Your post uploaded successfully','error');
+            typeCount++;
+        }else if(typeCount == 3){
+            openToastMessage('Facebook','Your post uploaded successfully','info');
+            typeCount++;
+        }else if(typeCount == 4){
+            openToastMessage('Facebook','Your post uploaded successfully','warning');
+            typeCount=1;
+        }
+        
+    });
+</script>
+</html>
