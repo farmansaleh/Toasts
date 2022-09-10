@@ -1,6 +1,6 @@
 /*
 author : @Farman Saleh
-date   : September 08/2022
+date   : September 10/2022
 github : github.com/farmansaleh
 Note   : Call this function when you dispaly notification or toasts for message.
 		 As a parameter you have to pass Toasts title, Message/Description, Color
